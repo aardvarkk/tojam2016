@@ -16,9 +16,6 @@ public class Whip : MonoBehaviour {
 		bool whipping = LastAttack + AttackDuration >= Time.timeSinceLevelLoad;
 		GetComponentInChildren <BoxCollider2D> ().enabled = whipping;
 
-		//		Debug.Log (whipping);
-
-
 		// If we're whipping, we don't care about the rest of this stuff
 		if (whipping)
 			return;
@@ -48,6 +45,9 @@ public class Whip : MonoBehaviour {
 			break;
 		}
 
+		// Set the direction of our strike based on the compass direction
+		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Compass.GetAngle(dir) - 90));
+			
 		// Mark our last attack time
 		LastAttack = Time.timeSinceLevelLoad;
 

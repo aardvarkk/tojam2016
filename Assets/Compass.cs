@@ -14,4 +14,9 @@ public static class Compass
 		float angle = Mathf.Atan2(delta.y, delta.x);
 		return (Direction) (Mathf.RoundToInt(8 * angle / (2 * Mathf.PI) + 8) % 8);
 	}
+
+	// E -> 0, NE -> 45, and so on
+	public static float GetAngle(Direction dir) {
+		return 45 * (int) dir;
+	}
 };
