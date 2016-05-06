@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	static float MoveSpeed = 1024f;
+	static float BaseMoveSpeed = CameraMover.MoveSpeed;
+	static float MoveSpeed = 512f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,10 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
-		transform.Translate (new Vector3 (MoveSpeed * Time.deltaTime * x, MoveSpeed * Time.deltaTime * y, 0));
+		transform.Translate (new Vector3 (
+			Time.deltaTime * MoveSpeed * x, 
+			Time.deltaTime * (BaseMoveSpeed + MoveSpeed * y), 
+			0));
 //		Debug.Log (transform.position.x);
 	}
 }
