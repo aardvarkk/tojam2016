@@ -1,31 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackWhip : MonoBehaviour {
+public class Whip : MonoBehaviour {
 
-	public static float AttackDuration = 0.5f;
+	public static float AttackDuration = 0.2f;
+
 	float LastAttack = 0;
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log ("COLLISION!");
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update() {
+		// Are we currently attacking? If so, we want to pay attention to the whip collisions
+		bool whipping = LastAttack + AttackDuration >= Time.timeSinceLevelLoad;
+		GetComponentInChildren <BoxCollider2D> ().enabled = whipping;
+
+		//		Debug.Log (whipping);
+
+
+		// If we're whipping, we don't care about the rest of this stuff
+		if (whipping)
+			return;
 
 		// Not trying to whip, so we don't care!
 		if (!Input.GetButtonDown ("Whip"))
 			return;
 
-		// Attacked too recently, so ignore
-		if (LastAttack + AttackDuration >= Time.timeSinceLevelLoad) {
-			Debug.Log ("Ignoring whip! Wait a bit, asshole!");
-			return;
-		}
-		
 		// Measure the attack direction - if it's invalid, attack forward
-		float x = Input.GetAxisRaw("Horizontal");
+		float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
 
 		// Default attack north if no keys are being held
@@ -45,8 +48,9 @@ public class AttackWhip : MonoBehaviour {
 			break;
 		}
 
+		// Mark our last attack time
 		LastAttack = Time.timeSinceLevelLoad;
 
-		Debug.Log ("Whip " + dir.ToString());
+		Debug.Log ("Whip " + dir.ToString ());
 	}
 }
