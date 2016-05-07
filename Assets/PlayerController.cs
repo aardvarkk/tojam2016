@@ -38,6 +38,6 @@ public class PlayerController : MonoBehaviour {
 
 		transform.position = lockedPos;
 			
-		Debug.Log (string.Format("Player at {0}", transform.position));
+//		Debug.Log (string.Format("Player at {0}", transform.position));
 	}
 }
