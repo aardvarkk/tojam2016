@@ -9,6 +9,8 @@ public class Whip : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("COLLISION!");
+
+		Destroy (other.gameObject);
 	}
 
 	void Update() {
@@ -39,9 +41,15 @@ public class Whip : MonoBehaviour {
 		// Don't allow attacks behind you
 		switch (dir) {
 		case Compass.Direction.SW:
+			dir = Compass.Direction.W;
+			break;
+
+		// Horse kick?
 		case Compass.Direction.S:
+			break;
+
 		case Compass.Direction.SE:
-			dir = Compass.Direction.N;
+			dir = Compass.Direction.E;
 			break;
 		}
 

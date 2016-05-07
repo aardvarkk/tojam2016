@@ -3,8 +3,13 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	public static float MoveSpeed = 512f;
+	public float VelocityX, VelocityY; // accessible outside of us
+
+	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
+	public static int ThrowBloodStacks = 0; // how many stacks required to throw blood
+
 	static float BaseMoveSpeed = CameraMover.MoveSpeed;
-	static float MoveSpeed = 512f;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +20,15 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
+
+		VelocityX = MoveSpeed * x;
+		VelocityY = (BaseMoveSpeed + MoveSpeed) * y;
+			
 		transform.Translate (new Vector3 (
-			Time.deltaTime * MoveSpeed * x, 
+			Time.deltaTime * VelocityX, 
 			Time.deltaTime * (BaseMoveSpeed + MoveSpeed * y), 
 			0));
+			
 //		Debug.Log (transform.position.x);
 	}
 }
