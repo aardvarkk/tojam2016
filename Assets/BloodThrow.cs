@@ -56,7 +56,10 @@ public class BloodThrow : MonoBehaviour {
 
 				// Instantiate some thrown blood and start it at our position
 				GameObject b = GameObject.Instantiate(ThrownBlood, transform.position, Quaternion.identity) as GameObject;
+				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 4;
 				b.GetComponent<ThrownBlood> ().SetVelocity (throwVel);
+
+				Debug.Log ("Threw Blood!");
 
 				// Reset for next throw
 				triggerTime = 0;

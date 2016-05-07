@@ -7,7 +7,7 @@ public class BossMover : MonoBehaviour {
 
 	void Update () {
 
-		float halfHeight = GetComponent<SpriteRenderer> ().bounds.extents.y;
+		float halfHeight = GetComponentInChildren<SpriteRenderer> ().bounds.extents.y;
 
 		// Don't allow ourselves to get less than the camera (stick us to the top once we're found)
 		transform.position = new Vector3(

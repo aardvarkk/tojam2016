@@ -5,10 +5,6 @@ public class ThrownBlood : MonoBehaviour {
 
 	public Vector3 Velocity;
 
-	// Use this for initialization
-	void Start () {
-	}
-
 	public void SetVelocity(Vector3 vel) {
 		Velocity = vel;
 	}
