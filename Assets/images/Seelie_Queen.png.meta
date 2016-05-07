@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 7c6b3fe6a7d6b4ece922afa6f45e328f
-timeCreated: 1462633627
+guid: 16b46c5690557401fbae012f81764be1
+timeCreated: 1462653580
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dullahan_0
-    21300002: dullahan_1
-    21300004: dullahan_2
-    21300006: dullahan_3
-    21300008: dullahan_4
-    21300010: dullahan_5
+    21300000: Seelie_Queen_0
+    21300002: Seelie_Queen_1
+    21300004: Seelie_Queen_2
+    21300006: Seelie_Queen_3
+    21300008: Seelie_Queen_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,8 +31,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 256
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -56,72 +55,96 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: dullahan_0
+    - name: Seelie_Queen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_1
+      outline:
+      - - {x: -22, y: 48}
+        - {x: -38, y: 18}
+        - {x: -38, y: -48}
+        - {x: 38, y: -48}
+        - {x: 38, y: 6}
+        - {x: 37, y: 20}
+        - {x: 20, y: 48}
+    - name: Seelie_Queen_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 96
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_2
+      outline:
+      - - {x: -22, y: 48}
+        - {x: -38, y: 18}
+        - {x: -38, y: -48}
+        - {x: 38, y: -48}
+        - {x: 38, y: 6}
+        - {x: 37, y: 20}
+        - {x: 20, y: 48}
+    - name: Seelie_Queen_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 192
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_3
+      outline:
+      - - {x: -22, y: 48}
+        - {x: -38, y: 18}
+        - {x: -38, y: -48}
+        - {x: 38, y: -48}
+        - {x: 38, y: 6}
+        - {x: 37, y: 20}
+        - {x: 20, y: 48}
+    - name: Seelie_Queen_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 288
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_4
+      outline:
+      - - {x: -22, y: 48}
+        - {x: -38, y: 18}
+        - {x: -38, y: -48}
+        - {x: 38, y: -48}
+        - {x: 38, y: 6}
+        - {x: 37, y: 20}
+        - {x: 20, y: 48}
+    - name: Seelie_Queen_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 384
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -22, y: 48}
+        - {x: -38, y: 18}
+        - {x: -38, y: -48}
+        - {x: 38, y: -48}
+        - {x: 38, y: 6}
+        - {x: 37, y: 20}
+        - {x: 20, y: 48}
     outline: []
   spritePackingTag: 
   userData: 

@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour {
 
 	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
 
-	static float BaseMoveSpeed = CameraMover.MoveSpeed;
+	static float BaseMoveSpeed = Camera.main.GetComponent<CameraMover>().MoveSpeed;
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
 			Debug.Log ("COLLISION!");
-			Destroy (gameObject);
+//			Destroy (gameObject);
 		}
 	}
 
