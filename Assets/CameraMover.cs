@@ -8,6 +8,6 @@ public class CameraMover : MonoBehaviour {
 	void Update () {
 		transform.Translate (new Vector3 (0, Time.deltaTime * MoveSpeed, 0));
 
-		Debug.Log (string.Format("Camera {0}", transform.position));
+//		Debug.Log (string.Format("Camera {0}", transform.position));
 	}
 }

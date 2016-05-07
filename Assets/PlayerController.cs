@@ -34,6 +34,6 @@ public class PlayerController : MonoBehaviour {
 		lockedPos.x = Mathf.Min (transform.position.x, Global.ScreenDimension / 2);
 		transform.position = lockedPos;
 			
-		Debug.Log (transform.position.x);
+//		Debug.Log (transform.position.x);
 	}
 }
