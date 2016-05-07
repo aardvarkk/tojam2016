@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public static float MoveSpeed = 512f;
+	public static float MoveSpeed = 64f;
 	public float VelocityX, VelocityY; // accessible outside of us
 
 	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
