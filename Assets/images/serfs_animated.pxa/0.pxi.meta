@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d1274bd3308e3423897bb6861259da2e
 timeCreated: 1462635930
+=======
+guid: f5e24ca0f196e4169b09ee00770337ec
+timeCreated: 1462635792
+>>>>>>> FETCH_HEAD
 licenseType: Free
 DefaultImporter:
   userData: 

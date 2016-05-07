@@ -66,5 +66,7 @@ public class Whip : MonoBehaviour {
 		LastAttack = Time.timeSinceLevelLoad;
 
 		Debug.Log ("Whip " + dir.ToString ());
+
+		GetComponent<Animator> ().SetBool ("whipping", true);
 	}
 }
