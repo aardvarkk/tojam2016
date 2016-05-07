@@ -17,7 +17,12 @@ public class Farmer : MonoBehaviour {
 
 		if (alerted) {
 
-			Transform pt = GameObject.Find ("Player").transform;
+			GameObject p = GameObject.Find ("Player");
+			if (!p) {
+				return;
+			}
+
+			Transform pt = p.transform;
 			Vector3 delta = (pt.position - transform.position);
 
 			// Turn to face the player (in one of eight cardinal directions)
