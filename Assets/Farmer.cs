@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Farmer : MonoBehaviour {
 
-	static float MoveSpeed = 256f;
-	static float MeleeRange = 180f;
+	static float MoveSpeed = 32f;
+	static float MeleeRange = 16f;
 		
 	// Use this for initialization
 	void Start () {
