@@ -3,10 +3,6 @@ using System.Collections;
 
 public class Whip : MonoBehaviour {
 
-	public static float AttackDuration = 0.2f;
-
-	float LastAttack = 0;
-
 	void OnTriggerEnter2D(Collider2D other) {
 
 		// Only care about triggering on "enemies" (things we can logically hit)
@@ -20,12 +16,8 @@ public class Whip : MonoBehaviour {
 
 	void Update() {
 		
-		// Are we currently attacking? If so, we want to pay attention to the whip collisions
-		bool whipping = LastAttack + AttackDuration >= Time.timeSinceLevelLoad;
-		GetComponent <BoxCollider2D> ().enabled = whipping;
-
-		// If we're whipping, we don't care about the rest of this stuff
-		if (whipping)
+		// If we're not idle, we can't trigger a whip
+		if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("IDLE"))
 			return;
 
 		// Not trying to whip, so we don't care!
@@ -58,21 +50,11 @@ public class Whip : MonoBehaviour {
 			GetComponent<Animator> ().SetTrigger ("WhipRight");
 			break;
 
-//		case Compass.Direction.SW:
-//			dir = Compass.Direction.W;
-//			break;
-
 		// Horse kick?
 //		case Compass.Direction.S:
 //			break;
 //
-//		case Compass.Direction.SE:
-//			dir = Compass.Direction.E;
-//			break;
 		}
-
-		// Mark our last attack time
-		LastAttack = Time.timeSinceLevelLoad;
 
 		Debug.Log ("Whip " + dir.ToString ());
 
