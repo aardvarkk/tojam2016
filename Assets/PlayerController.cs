@@ -28,7 +28,12 @@ public class PlayerController : MonoBehaviour {
 			Time.deltaTime * VelocityX, 
 			Time.deltaTime * (BaseMoveSpeed + MoveSpeed * y), 
 			0));
+
+		// Lock player to edges of camera
+		Vector3 lockedPos = transform.position;
+		lockedPos.x = Mathf.Min (transform.position.x, Global.ScreenDimension / 2);
+		transform.position = lockedPos;
 			
-//		Debug.Log (transform.position.x);
+		Debug.Log (transform.position.x);
 	}
 }
