@@ -54,8 +54,7 @@ public class BloodThrow : MonoBehaviour {
 				throwVel.y += pc.VelocityY;
 
 				// Instantiate some thrown blood and start it at our position
-				GameObject b = GameObject.Instantiate(ThrownBlood);
-				b.transform.position = gameObject.transform.position;
+				GameObject b = GameObject.Instantiate(ThrownBlood, transform.position, Quaternion.identity) as GameObject;
 				b.GetComponent<ThrownBlood> ().SetVelocity (throwVel);
 
 				// Reset for next throw

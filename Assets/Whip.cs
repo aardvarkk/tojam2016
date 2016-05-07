@@ -8,15 +8,19 @@ public class Whip : MonoBehaviour {
 	float LastAttack = 0;
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("COLLISION!");
 
+		// Stops the whip from destroyed our glare collider right off the top
+		if (LastAttack == 0) return;
+
+		Debug.Log ("Whip Collision!");
 		Destroy (other.gameObject);
 	}
 
 	void Update() {
+		
 		// Are we currently attacking? If so, we want to pay attention to the whip collisions
 		bool whipping = LastAttack + AttackDuration >= Time.timeSinceLevelLoad;
-		GetComponentInChildren <BoxCollider2D> ().enabled = whipping;
+		GetComponent <BoxCollider2D> ().enabled = whipping;
 
 		// If we're whipping, we don't care about the rest of this stuff
 		if (whipping)
