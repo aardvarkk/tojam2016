@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5f24cd2f99073480b9d90e09af55426d
-timeCreated: 1462631061
+timeCreated: 1462638833
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,8 +61,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: whip_1
@@ -72,8 +72,8 @@ TextureImporter:
         y: 0
         width: 24
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: whip_2
@@ -83,8 +83,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: whip_3
@@ -94,8 +94,8 @@ TextureImporter:
         y: 0
         width: 24
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.35, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

@@ -46,27 +46,35 @@ public class Whip : MonoBehaviour {
 
 		// Don't allow attacks behind you
 		switch (dir) {
-		case Compass.Direction.SW:
-			dir = Compass.Direction.W;
+		case Compass.Direction.N:
+			GetComponent<Animator> ().SetTrigger ("WhipForward");
 			break;
+
+		case Compass.Direction.W:
+			GetComponent<Animator> ().SetTrigger ("WhipLeft");
+			break;
+
+		case Compass.Direction.E:
+			GetComponent<Animator> ().SetTrigger ("WhipRight");
+			break;
+
+//		case Compass.Direction.SW:
+//			dir = Compass.Direction.W;
+//			break;
 
 		// Horse kick?
-		case Compass.Direction.S:
-			break;
-
-		case Compass.Direction.SE:
-			dir = Compass.Direction.E;
-			break;
+//		case Compass.Direction.S:
+//			break;
+//
+//		case Compass.Direction.SE:
+//			dir = Compass.Direction.E;
+//			break;
 		}
 
-		// Set the direction of our strike based on the compass direction
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, Compass.GetAngle(dir) - 90));
-			
 		// Mark our last attack time
 		LastAttack = Time.timeSinceLevelLoad;
 
 		Debug.Log ("Whip " + dir.ToString ());
 
-		GetComponent<Animator> ().SetBool ("whipping", true);
 	}
 }
