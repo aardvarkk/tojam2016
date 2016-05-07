@@ -9,9 +9,11 @@ public class Whip : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		// Stops the whip from destroyed our glare collider right off the top
-		if (LastAttack == 0) return;
-
+		// Only care about triggering on "enemies" (things we can logically hit)
+		// If we don't check this, our whip can collide with our own body, etc.
+		if (other.tag != "Enemy")
+			return;
+		
 		Debug.Log ("Whip Collision!");
 		Destroy (other.gameObject);
 	}
