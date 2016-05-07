@@ -67,6 +67,6 @@ public class Whip : MonoBehaviour {
 
 		Debug.Log ("Whip " + dir.ToString ());
 
-		GetComponent<Animator> ().SetBool ("startWhip", true);
+		GetComponent<Animator> ().SetBool ("whipping", true);
 	}
 }
