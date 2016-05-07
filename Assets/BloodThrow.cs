@@ -8,6 +8,7 @@ public class BloodThrow : MonoBehaviour {
 	public float MaxThrowVelocity; // fastest in-game velocity for blood throw
 	public float MinThrowVelocity; // slowest (shortest) blood throw
 	public float MaxThrowHoldTime; // if we're still holding after this time, we'll throw the blood the farthest
+	public int ThrowBloodStacks = 0; // how many stacks required to throw blood
 
 	float triggerTime = 0;
 
@@ -19,7 +20,7 @@ public class BloodThrow : MonoBehaviour {
 		// Trying to start throwing blood
 		// We can only throw blood if we have enough stacks
 		// And if we don't have active blood being thrown (triggerTime must be reset to 0)
-		if (Input.GetButtonDown ("ThrowBlood") && pc.KillStacks >= PlayerController.ThrowBloodStacks && triggerTime == 0) {
+		if (Input.GetButtonDown ("ThrowBlood") && pc.KillStacks >= ThrowBloodStacks && triggerTime == 0) {
 			Debug.Log ("Throwing Blood!");
 			triggerTime = Time.timeSinceLevelLoad;
 			return;

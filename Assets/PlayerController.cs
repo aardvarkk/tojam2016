@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour {
 	public float VelocityX, VelocityY; // accessible outside of us
 
 	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
-	public static int ThrowBloodStacks = 0; // how many stacks required to throw blood
 
 	static float BaseMoveSpeed = CameraMover.MoveSpeed;
 
