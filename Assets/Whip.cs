@@ -46,8 +46,16 @@ public class Whip : MonoBehaviour {
 			GetComponent<Animator> ().SetTrigger ("WhipLeft");
 			break;
 
+		case Compass.Direction.NW:
+			GetComponent<Animator> ().SetTrigger ("WhipUpLeft");
+			break;
+
 		case Compass.Direction.E:
 			GetComponent<Animator> ().SetTrigger ("WhipRight");
+			break;
+
+		case Compass.Direction.NE:
+			GetComponent<Animator> ().SetTrigger ("WhipUpRight");
 			break;
 
 		// Horse kick?
