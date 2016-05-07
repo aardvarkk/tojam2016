@@ -3,17 +3,14 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public static float MoveSpeed = 64f;
+	public float MaxPercX;
+	public float MaxPercY;
+	public float MoveSpeed;
 	public float VelocityX, VelocityY; // accessible outside of us
 
 	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
 
 	static float BaseMoveSpeed = CameraMover.MoveSpeed;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,9 +27,17 @@ public class PlayerController : MonoBehaviour {
 
 		// Lock player to edges of camera
 		Vector3 lockedPos = transform.position;
-		lockedPos.x = Mathf.Min (transform.position.x, Global.ScreenDimension / 2);
+
+		// Limiting player in X coords
+		lockedPos.x = Mathf.Min (lockedPos.x,  Global.ScreenDimension / 2 * MaxPercX);
+		lockedPos.x = Mathf.Max (lockedPos.x, -Global.ScreenDimension / 2 * MaxPercX);
+
+		// Limiting player in Y coords
+		lockedPos.y = Mathf.Max (lockedPos.y, Camera.main.transform.position.y - (Global.ScreenDimension / 2 * MaxPercY));
+		lockedPos.y = Mathf.Min (lockedPos.y, Camera.main.transform.position.y + (Global.ScreenDimension / 2 * MaxPercY));
+
 		transform.position = lockedPos;
 			
-//		Debug.Log (transform.position.x);
+		Debug.Log (string.Format("Player at {0}", transform.position));
 	}
 }
