@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
@@ -25,9 +26,11 @@ public class Enemy : MonoBehaviour {
 		// Spawn a ghost, blood pool, blood spray and call farmer die to flip the sprite
 		if (Ghost) {
 			GetComponent<Farmer> ().Die();
-			GameObject g = GameObject.Instantiate (Ghost, transform.position, Quaternion.identity) as GameObject;
-		} else {
-			Destroy (gameObject);
+			GameObject.Instantiate (Ghost, transform.position, Quaternion.identity);
+		} 
+		// Killed the boss! Go to victory screen!
+		else {
+			SceneManager.LoadScene (3);
 		}
 	}
 }

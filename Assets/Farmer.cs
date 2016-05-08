@@ -27,14 +27,21 @@ public class Farmer : MonoBehaviour {
 
 		// Show the blood spray based on which way the dude was facing
 		GameObject spray = GameObject.Instantiate (BloodSpray, transform.position, Quaternion.identity) as GameObject;
+
+		int xScale = 1;
 		switch (facing) {
 		case Compass.Direction.SE:
 		case Compass.Direction.E:
 		case Compass.Direction.NE:
+			xScale = -1;
+			break;
+
 		case Compass.Direction.N:
-			spray.transform.localScale = new Vector3 (-1, 1, 1);
+		case Compass.Direction.S:
+			xScale = Random.value >= 0.5 ? 1 : -1;
 			break;
 		}
+		spray.transform.localScale = new Vector3 (xScale, 1, 1);
 
 		dead = true;
 	}
