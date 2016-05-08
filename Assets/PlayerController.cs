@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour {
 	public float MoveSpeed;
 	public float VelocityX, VelocityY; // accessible outside of us
 
-	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
-
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
 			Debug.Log (string.Format("Collision with {0}", other.name));

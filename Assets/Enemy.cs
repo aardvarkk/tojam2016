@@ -15,4 +15,11 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 //		Debug.Log (string.Format("{0} {1}", Health, name));
 	}
+
+	// Called if our health gets too low
+	// We use this callback to give the player more stacks on the bloodbar
+	public void Kill() {
+		GameObject.Find ("BloodBarManager").GetComponent<BloodBarManager>().AddKill();
+		Destroy (gameObject);
+	}
 }

@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour {
 		}
 
 		// If we're no longer visible, kill ourselves
-		if (!GetComponent<SpriteRenderer> ().isVisible)
+		if (!GetComponent<Renderer> ().isVisible)
 			Destroy (gameObject);
 	}
 

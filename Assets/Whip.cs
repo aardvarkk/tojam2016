@@ -30,8 +30,8 @@ public class Whip : MonoBehaviour {
 			t.Find("HealthBarPivot").localScale = new Vector3(e.Health / e.StartHealth, 1, 1);
 
 		// If we killed it, great!
-		if (e.Health <= 0) 
-			Destroy (other.transform.parent.gameObject);
+		if (e.Health <= 0)
+			e.Kill ();
 	}
 
 	void Update() {
