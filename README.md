@@ -8,9 +8,9 @@ http://wiki.unity3d.com/index.php?title=AspectRatioEnforcer
 * 1: detailed terrain (dirt, roads, rivers, etc)
 * 2: objects (houses, lamps, fences)
 * 3: enemies
-* 4: player projectiles (whip, blood)
-* 5: player
 * 6: boss
 * 7: boss overlays (our blood bar, snakes, health bar)
 * 8: boss details (fwd snakes, health bar overlay)
 * 9: boss projectiles
+* 10: player projectiles (whip, blood)
+* 11: player

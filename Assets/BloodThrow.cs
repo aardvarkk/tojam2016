@@ -59,7 +59,7 @@ public class BloodThrow : MonoBehaviour {
 				b.GetComponent<Projectile> ().SetVelocity (throwVel);
 
 				// I think you can only set the particle system layer in code? Not in the GUI?
-				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 4;
+				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 10;
 
 //				Debug.Log ("Threw Blood!");
 
