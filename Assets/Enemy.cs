@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour {
 	public void Kill() {
 		GameObject.Find ("BloodBarManager").GetComponent<BloodBarManager>().AddKill();
 
-		// Spawn a ghost and flip our sprite (and stop us moving!)
+		// Spawn a ghost, blood pool, blood spray and call farmer die to flip the sprite
 		if (Ghost) {
 			GetComponent<Farmer> ().Die();
 			GameObject g = GameObject.Instantiate (Ghost, transform.position, Quaternion.identity) as GameObject;

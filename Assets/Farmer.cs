@@ -5,6 +5,8 @@ public class Farmer : MonoBehaviour {
 
 	public float AlertRange;
 	public float MoveSpeed;
+	public GameObject BloodPool;
+	public GameObject BloodSpray;
 		
 	bool alerted;
 	bool dead;
@@ -19,6 +21,7 @@ public class Farmer : MonoBehaviour {
 		transform.localScale = new Vector3 (1, -1, 1);
 		GetComponent<Animator> ().enabled = false;
 		GetComponent<Collider2D> ().enabled = false;
+		GameObject.Instantiate (BloodPool, transform.position, Quaternion.identity);
 		dead = true;
 	}
 

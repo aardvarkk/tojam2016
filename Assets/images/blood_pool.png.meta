@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: 172de84d76a134ad19ab39642318b274
-timeCreated: 1462725525
+timeCreated: 1462725641
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: blood_pool_0
+    21300002: blood_pool_1
+    21300004: blood_pool_2
+    21300006: blood_pool_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +42,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +53,82 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: blood_pool_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 4}
+        - {x: -5, y: 2}
+        - {x: -5, y: -1}
+        - {x: -4, y: -4}
+        - {x: 5, y: -4}
+        - {x: 7, y: -2}
+        - {x: 7, y: 4}
+    - name: blood_pool_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 5}
+        - {x: -6, y: 1}
+        - {x: -6, y: -2}
+        - {x: -1, y: -5}
+        - {x: 4, y: -5}
+        - {x: 8, y: -2}
+        - {x: 9, y: -1}
+        - {x: 9, y: 5}
+    - name: blood_pool_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 6}
+        - {x: -7, y: 3}
+        - {x: -7, y: -2}
+        - {x: -6, y: -5}
+        - {x: 8, y: -5}
+        - {x: 12, y: 1}
+        - {x: 12, y: 3}
+        - {x: 8, y: 6}
+    - name: blood_pool_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 6}
+        - {x: -5, y: 6}
+        - {x: -8, y: 3}
+        - {x: -8, y: -2}
+        - {x: -7, y: -5}
+        - {x: 10, y: -5}
+        - {x: 13, y: 0}
+        - {x: 13, y: 3}
     outline: []
   spritePackingTag: 
   userData: 
