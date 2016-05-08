@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+	public GameObject Ghost;
 	public float StartHealth;
 	public float Health;
 
@@ -21,5 +22,10 @@ public class Enemy : MonoBehaviour {
 	public void Kill() {
 		GameObject.Find ("BloodBarManager").GetComponent<BloodBarManager>().AddKill();
 		Destroy (gameObject);
+
+		// Spawn a ghost if we have one!
+		if (Ghost) {
+			GameObject g = GameObject.Instantiate (Ghost, transform.position, Quaternion.identity) as GameObject;
+		}
 	}
 }
