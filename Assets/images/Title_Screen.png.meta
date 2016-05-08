@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 5cb28dc8bc87643e6875b1798dfeb925
-timeCreated: 1462722382
+guid: 7d6c3fb106cff4b9f9d02eba835e479e
+timeCreated: 1462721173
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: serf_ghosts_0
-    21300002: serf_ghosts_1
-    21300004: serf_ghosts_2
+    21300000: Title_Screen_0
+    21300002: Title_Screen_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,39 +52,36 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: serf_ghosts_0
+    - name: Title_Screen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: serf_ghosts_1
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+    - name: Title_Screen_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 256
         y: 0
-        width: 16
-        height: 16
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: serf_ghosts_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
     outline: []
   spritePackingTag: 
   userData: 
