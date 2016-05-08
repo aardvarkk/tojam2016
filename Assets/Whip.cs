@@ -59,10 +59,12 @@ public class Whip : MonoBehaviour {
 		// Don't allow attacks behind you
 		switch (dir) {
 		case Compass.Direction.N:
+		case Compass.Direction.S:
 			GetComponent<Animator> ().SetTrigger ("WhipForward");
 			break;
 
 		case Compass.Direction.W:
+		case Compass.Direction.SW:
 			GetComponent<Animator> ().SetTrigger ("WhipLeft");
 			break;
 
@@ -71,6 +73,7 @@ public class Whip : MonoBehaviour {
 			break;
 
 		case Compass.Direction.E:
+		case Compass.Direction.SE:
 			GetComponent<Animator> ().SetTrigger ("WhipRight");
 			break;
 
