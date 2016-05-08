@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 7c6b3fe6a7d6b4ece922afa6f45e328f
-timeCreated: 1462633627
+guid: e83e2f1f1d88b47a398b9f500ff3d3c7
+timeCreated: 1462667974
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dullahan_0
-    21300002: dullahan_1
-    21300004: dullahan_2
-    21300006: dullahan_3
-    21300008: dullahan_4
-    21300010: dullahan_5
+    21300000: Snake_Shot_0
+    21300002: Snake_Shot_1
+    21300004: Snake_Shot_2
+    21300006: Snake_Shot_3
+    21300008: Snake_Shot_4
+    21300010: Snake_Shot_5
+    21300012: Snake_Shot_6
+    21300014: Snake_Shot_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,8 +34,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 256
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -56,70 +58,92 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: dullahan_0
+    - name: Snake_Shot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: dullahan_1
+    - name: Snake_Shot_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: dullahan_2
+    - name: Snake_Shot_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: dullahan_3
+    - name: Snake_Shot_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: dullahan_4
+    - name: Snake_Shot_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: dullahan_5
+    - name: Snake_Shot_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Snake_Shot_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Snake_Shot_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

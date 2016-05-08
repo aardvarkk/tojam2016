@@ -1,19 +1,18 @@
 fileFormatVersion: 2
-guid: 7c6b3fe6a7d6b4ece922afa6f45e328f
-timeCreated: 1462633627
+guid: 10bf7b934942648508f917eb3d19593e
+timeCreated: 1462653827
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dullahan_0
-    21300002: dullahan_1
-    21300004: dullahan_2
-    21300006: dullahan_3
-    21300008: dullahan_4
-    21300010: dullahan_5
+    21300000: Snake_L1_0
+    21300002: Snake_L1_1
+    21300004: Snake_L1_2
+    21300006: Snake_L1_3
+    21300008: Snake_L1_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -32,8 +31,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 256
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -56,72 +55,96 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: dullahan_0
+    - name: Snake_L1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_1
+      outline:
+      - - {x: -48, y: 32}
+        - {x: -48, y: 16}
+        - {x: 4, y: -1}
+        - {x: 30, y: -6}
+        - {x: 48, y: -6}
+        - {x: 48, y: 9}
+        - {x: -19, y: 32}
+    - name: Snake_L1_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 96
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_2
+      outline:
+      - - {x: -45, y: 19}
+        - {x: -45, y: 4}
+        - {x: -22, y: -6}
+        - {x: 48, y: -6}
+        - {x: 48, y: 11}
+        - {x: 13, y: 19}
+    - name: Snake_L1_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 192
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_3
+      outline:
+      - - {x: -48, y: 8}
+        - {x: -48, y: -7}
+        - {x: -33, y: -12}
+        - {x: 5, y: -12}
+        - {x: 48, y: -6}
+        - {x: 48, y: 5}
+        - {x: 42, y: 8}
+    - name: Snake_L1_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 288
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_4
+      outline:
+      - - {x: -8, y: 5}
+        - {x: -46, y: -5}
+        - {x: -46, y: -18}
+        - {x: -5, y: -18}
+        - {x: 48, y: -10}
+        - {x: 48, y: 5}
+    - name: Snake_L1_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 384
         y: 0
-        width: 16
-        height: 32
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: dullahan_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 33, y: 5}
+        - {x: -41, y: -16}
+        - {x: -46, y: -22}
+        - {x: -46, y: -27}
+        - {x: -44, y: -32}
+        - {x: -31, y: -32}
+        - {x: -3, y: -27}
+        - {x: 48, y: -6}
+        - {x: 48, y: 5}
     outline: []
   spritePackingTag: 
   userData: 

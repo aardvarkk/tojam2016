@@ -10,12 +10,10 @@ public class PlayerController : MonoBehaviour {
 
 	public int KillStacks = 0; // how many kills we've stacked -- once we get to a certain number we can throw blood
 
-	static float BaseMoveSpeed = CameraMover.MoveSpeed;
-
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
-			Debug.Log ("COLLISION!");
-			Destroy (gameObject);
+			Debug.Log (string.Format("Collision with {0}", other.name));
+			Destroy (this.gameObject);
 		}
 	}
 
@@ -25,11 +23,11 @@ public class PlayerController : MonoBehaviour {
 		float y = Input.GetAxisRaw ("Vertical");
 
 		VelocityX = MoveSpeed * x;
-		VelocityY = (BaseMoveSpeed + MoveSpeed) * y;
+		VelocityY = Camera.main.GetComponent<CameraMover>().MoveSpeed + MoveSpeed * y;
 			
 		transform.Translate (new Vector3 (
 			Time.deltaTime * VelocityX, 
-			Time.deltaTime * (BaseMoveSpeed + MoveSpeed * y), 
+			Time.deltaTime * VelocityY, 
 			0));
 
 		// Lock player to edges of camera
