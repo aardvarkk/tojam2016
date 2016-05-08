@@ -11,6 +11,6 @@ http://wiki.unity3d.com/index.php?title=AspectRatioEnforcer
 * 4: player projectiles (whip, blood)
 * 5: player
 * 6: boss
-* 7: boss details (snakes, health bar)
+* 7: boss overlays (our blood bar, snakes, health bar)
 * 8: boss details (fwd snakes, health bar overlay)
 * 9: boss projectiles
