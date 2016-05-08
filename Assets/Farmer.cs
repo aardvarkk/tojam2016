@@ -27,6 +27,18 @@ public class Farmer : MonoBehaviour {
 
 			// Turn to face the player (in one of eight cardinal directions)
 			Compass.Direction dir = Compass.GetDirection(delta);
+
+			switch (dir) {
+			case Compass.Direction.SE:
+			case Compass.Direction.E:
+			case Compass.Direction.NE:
+				transform.localScale = new Vector3 (-1, 1, 1);
+				break;
+			default:
+				transform.localScale = new Vector3 (+1, 1, 1);
+				break;
+			}
+
 //			Debug.Log (string.Format ("Player is in direction {0}", dir.ToString ()));
 				
 			// In melee range?
