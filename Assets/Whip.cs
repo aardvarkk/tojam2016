@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Whip : MonoBehaviour {
 
+	public float Damage;
+
 	void OnTriggerEnter2D(Collider2D other) {
 
 		// Only care about triggering on "enemies" (things we can logically hit)
