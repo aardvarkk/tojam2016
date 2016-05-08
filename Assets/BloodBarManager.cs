@@ -20,13 +20,13 @@ public class BloodBarManager : MonoBehaviour {
 		BloodIcons = new List<GameObject>();
 		AddDrop ();
 
-		AddKill ();
-		AddKill ();
-		AddKill ();
-		AddKill ();
-		AddKill ();
-		AddKill ();
-		AddKill ();
+//		AddKill ();
+//		AddKill ();
+//		AddKill ();
+//		AddKill ();
+//		AddKill ();
+//		AddKill ();
+//		AddKill ();
 	}
 		
 	public bool CanThrowBlood() {
