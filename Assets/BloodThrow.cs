@@ -56,8 +56,10 @@ public class BloodThrow : MonoBehaviour {
 
 				// Instantiate some thrown blood and start it at our position
 				GameObject b = GameObject.Instantiate(ThrownBlood, transform.position, Quaternion.identity) as GameObject;
-				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 4;
 				b.GetComponent<Projectile> ().SetVelocity (throwVel);
+
+				// I think you can only set the particle system layer in code? Not in the GUI?
+				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 4;
 
 //				Debug.Log ("Threw Blood!");
 

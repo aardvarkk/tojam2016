@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BloodBarManager : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class BloodBarManager : MonoBehaviour {
 	int TotalStacks = 0; // how many stacks we currently have
 	int CurDropFill = 0;
 
-//	ArrayList<GameObject> BloodIcons; // our actual icons
+	List<GameObject> BloodIcons; // our actual icons
 
 	public bool CanThrowBlood() {
 		return TotalStacks >= ThrowBloodStacks;
