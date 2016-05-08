@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Whip : MonoBehaviour {
 
+	public AudioClip WhipSound;
 	public float Damage;
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -74,6 +75,8 @@ public class Whip : MonoBehaviour {
 //			break;
 //
 		}
+
+		GameObject.Find ("SoundPlayer").GetComponent<AudioSource> ().PlayOneShot (WhipSound);
 
 //		Debug.Log ("Whip " + dir.ToString ());
 
