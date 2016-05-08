@@ -8,6 +8,7 @@ public class BloodThrow : MonoBehaviour {
 	public float MaxThrowVelocity; // fastest in-game velocity for blood throw
 	public float MinThrowVelocity; // slowest (shortest) blood throw
 	public float MaxThrowHoldTime; // if we're still holding after this time, we'll throw the blood the farthest
+	public AudioClip BloodSound; // sound to play when throwing blood
 
 	float triggerTime = 0;
 
@@ -62,7 +63,12 @@ public class BloodThrow : MonoBehaviour {
 				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 10;
 
 //				Debug.Log ("Threw Blood!");
+
+				// Remove the drop onscreen
 				mgr.RemoveDrop();
+
+				// Play the sound
+				GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(BloodSound);
 
 				// Reset for next throw
 				triggerTime = 0;
