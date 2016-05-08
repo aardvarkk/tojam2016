@@ -13,7 +13,8 @@ public class AnyKeySwitch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKeyDown) {
+//		if (Input.anyKeyDown) {
+		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)) {
 			SceneManager.LoadScene (SwitchTo);
 		}	
 	}
