@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float MaxPercY;
 	public float MoveSpeed;
 	public float VelocityX, VelocityY; // accessible outside of us
+	public AudioClip DeathSound;
+	public GameObject DeathGuy;
 
 	void Start() {
 		Cursor.visible = false;
@@ -16,8 +18,10 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
 			Debug.Log (string.Format("Collision with {0}", other.name));
+
+			GameObject.Find ("SoundPlayer").GetComponent<AudioSource> ().PlayOneShot (DeathSound);
+			GameObject.Instantiate (DeathGuy, transform.position, Quaternion.identity);
 			Destroy (this.gameObject);
-			SceneManager.LoadScene (2);
 		}
 	}
 
