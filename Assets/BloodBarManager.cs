@@ -6,6 +6,7 @@ public class BloodBarManager : MonoBehaviour {
 
 	public Sprite[] FillSprites; // sprites used to fill
 	public GameObject BloodIcon; // prefab for making the blood icons
+	public float BloodIconSep;
 
 	static int ThrowBloodStacks = 5; // how many stacks required to throw blood
 	int TotalStacks = 0; // how many stacks we currently have
@@ -13,8 +14,37 @@ public class BloodBarManager : MonoBehaviour {
 
 	List<GameObject> BloodIcons; // our actual icons
 
+	// Use this for initialization
+	void Start () {
+		// Add our first blood icon
+		BloodIcons = new List<GameObject>();
+		AddDrop ();
+
+		AddKill ();
+		AddKill ();
+		AddKill ();
+		AddKill ();
+		AddKill ();
+		AddKill ();
+		AddKill ();
+	}
+		
 	public bool CanThrowBlood() {
 		return TotalStacks >= ThrowBloodStacks;
+	}
+
+	public void RemoveDrop() {
+		if (!CanThrowBlood ())
+			return;
+
+		Destroy (BloodIcons [0]);
+		BloodIcons.RemoveAt (0);
+
+		// Shift remaining icons back
+		for (int i = 0; i < BloodIcons.Count; ++i)
+			BloodIcons [i].transform.Translate (new Vector3 (-BloodIconSep, 0, 0));
+
+		TotalStacks -= ThrowBloodStacks;
 	}
 
 	public void AddKill() {
@@ -34,21 +64,11 @@ public class BloodBarManager : MonoBehaviour {
 	}
 
 	void AddDrop() {
+//		Debug.Log ("Adding drop!");
+
 		GameObject bi = GameObject.Instantiate (BloodIcon, transform.position, Quaternion.identity) as GameObject;
 		bi.transform.parent = transform;
-		bi.transform.Translate (new Vector3 (BloodIcons.Count * 20, 0, 0));
+		bi.transform.Translate (new Vector3 (BloodIcons.Count * BloodIconSep, 0, 0));
 		BloodIcons.Add (bi);
-	}
-
-	// Use this for initialization
-	void Start () {
-		// Add our first blood icon
-		BloodIcons = new List<GameObject>();
-		AddDrop ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

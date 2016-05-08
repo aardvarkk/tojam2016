@@ -18,6 +18,22 @@ public class Enemy : MonoBehaviour {
 //		Debug.Log (string.Format("{0} {1}", Health, name));
 	}
 
+	public void TakeDamage(float Damage) {
+		// Do our damage!
+		Health -= Damage;
+
+		//		Debug.Log (string.Format ("Reduced health to {0}", e.Health));
+
+		// If we can reduce the health bar, do it!
+		Transform t = transform.parent.Find("HealthBarOverlay");
+		if (t)
+			t.Find("HealthBarPivot").localScale = new Vector3(Health / StartHealth, 1, 1);
+
+		// If we killed it, great!
+		if (Health <= 0)
+			Kill ();
+	}
+
 	// Called if our health gets too low
 	// We use this callback to give the player more stacks on the bloodbar
 	public void Kill() {

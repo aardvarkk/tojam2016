@@ -62,6 +62,7 @@ public class BloodThrow : MonoBehaviour {
 				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 10;
 
 //				Debug.Log ("Threw Blood!");
+				mgr.RemoveDrop();
 
 				// Reset for next throw
 				triggerTime = 0;

@@ -19,19 +19,7 @@ public class Whip : MonoBehaviour {
 		if (!e)
 			return;
 
-		// Do our damage!
-		e.Health -= Damage;
-
-//		Debug.Log (string.Format ("Reduced health to {0}", e.Health));
-
-		// If we can reduce the health bar, do it!
-		Transform t = other.transform.parent.Find("HealthBarOverlay");
-		if (t)
-			t.Find("HealthBarPivot").localScale = new Vector3(e.Health / e.StartHealth, 1, 1);
-
-		// If we killed it, great!
-		if (e.Health <= 0)
-			e.Kill ();
+		e.TakeDamage (Damage);
 	}
 
 	void Update() {
