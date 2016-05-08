@@ -2,7 +2,9 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Menu : MonoBehaviour {
+public class AnyKeySwitch : MonoBehaviour {
+
+	public int SwitchTo;
 
 	// Use this for initialization
 	void Start () {
@@ -11,12 +13,8 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.Quit ();
-		}
-
-		if (Input.anyKey) {
-			SceneManager.LoadScene (1);
-		}
+		if (Input.anyKeyDown) {
+			SceneManager.LoadScene (SwitchTo);
+		}	
 	}
 }
