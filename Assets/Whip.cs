@@ -12,7 +12,7 @@ public class Whip : MonoBehaviour {
 		if (other.tag != "Enemy")
 			return;
 		
-		Debug.Log (string.Format("Whip Collision with {0}!", other.name));
+//		Debug.Log (string.Format("Whip Collision with {0}!", other.name));
 
 		// Only care if it's an enemy
 		Enemy e = other.gameObject.GetComponentInParent<Enemy> ();
@@ -22,7 +22,7 @@ public class Whip : MonoBehaviour {
 		// Do our damage!
 		e.Health -= Damage;
 
-		Debug.Log (string.Format ("Reduced health to {0}", e.Health));
+//		Debug.Log (string.Format ("Reduced health to {0}", e.Health));
 
 		// If we can reduce the health bar, do it!
 		Transform t = other.transform.parent.Find("HealthBarOverlay").Find("HealthBarPivot");
@@ -31,7 +31,7 @@ public class Whip : MonoBehaviour {
 
 		// If we killed it, great!
 		if (e.Health <= 0) 
-			Destroy (other.gameObject);
+			Destroy (other.transform.parent.gameObject);
 	}
 
 	void Update() {
@@ -84,7 +84,7 @@ public class Whip : MonoBehaviour {
 //
 		}
 
-		Debug.Log ("Whip " + dir.ToString ());
+//		Debug.Log ("Whip " + dir.ToString ());
 
 	}
 }
