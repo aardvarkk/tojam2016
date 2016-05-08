@@ -21,22 +21,30 @@ public class BloodBarManager : MonoBehaviour {
 		++TotalStacks;
 //		Debug.Log ("Got Kill!");
 
-		GameObject lastIcon = BloodIcons [BloodIcons.Count - 1];
-
 		++CurDropFill;
 		// We've filled a drop!
 		if (CurDropFill > ThrowBloodStacks) {
-		}
+			AddDrop ();
+			CurDropFill = 1;
+		} 
+			
+		GameObject lastIcon = BloodIcons [BloodIcons.Count - 1];
+
 		lastIcon.GetComponent<SpriteRenderer> ().sprite = FillSprites [CurDropFill];
+	}
+
+	void AddDrop() {
+		GameObject bi = GameObject.Instantiate (BloodIcon, transform.position, Quaternion.identity) as GameObject;
+		bi.transform.parent = transform;
+		bi.transform.Translate (new Vector3 (BloodIcons.Count * 20, 0, 0));
+		BloodIcons.Add (bi);
 	}
 
 	// Use this for initialization
 	void Start () {
 		// Add our first blood icon
 		BloodIcons = new List<GameObject>();
-		GameObject bi = GameObject.Instantiate (BloodIcon, transform.position, Quaternion.identity) as GameObject;
-		bi.transform.parent = transform;
-		BloodIcons.Add (bi);
+		AddDrop ();
 	}
 	
 	// Update is called once per frame
