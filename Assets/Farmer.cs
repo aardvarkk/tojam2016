@@ -10,11 +10,13 @@ public class Farmer : MonoBehaviour {
 		
 	bool alerted;
 	bool dead;
+	Compass.Direction facing;
 
 	// Use this for initialization
 	void Start () {
 		alerted = false;
 		dead = false;
+		facing = Compass.Direction.W;
 	}
 
 	public void Die() {
@@ -22,6 +24,18 @@ public class Farmer : MonoBehaviour {
 		GetComponent<Animator> ().enabled = false;
 		GetComponent<Collider2D> ().enabled = false;
 		GameObject.Instantiate (BloodPool, transform.position, Quaternion.identity);
+
+		// Show the blood spray based on which way the dude was facing
+		GameObject spray = GameObject.Instantiate (BloodSpray, transform.position, Quaternion.identity) as GameObject;
+		switch (facing) {
+		case Compass.Direction.SE:
+		case Compass.Direction.E:
+		case Compass.Direction.NE:
+		case Compass.Direction.N:
+			spray.transform.localScale = new Vector3 (-1, 1, 1);
+			break;
+		}
+
 		dead = true;
 	}
 
@@ -45,9 +59,9 @@ public class Farmer : MonoBehaviour {
 			Vector3 delta = (pt.position - transform.position);
 
 			// Turn to face the player (in one of eight cardinal directions)
-			Compass.Direction dir = Compass.GetDirection(delta);
+			facing = Compass.GetDirection(delta);
 
-			switch (dir) {
+			switch (facing) {
 			case Compass.Direction.SE:
 			case Compass.Direction.E:
 			case Compass.Direction.NE:

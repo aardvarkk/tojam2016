@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 		if (other.tag == "Enemy") {
 			Debug.Log (string.Format("Collision with {0}", other.name));
 			Destroy (this.gameObject);
+			SceneManager.LoadScene (2);
 		}
 	}
 
