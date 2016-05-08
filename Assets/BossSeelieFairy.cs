@@ -5,6 +5,8 @@ public class BossSeelieFairy : MonoBehaviour {
 
 	public GameObject SnakeShot;
 	public float FireDelay;
+	public float FireSpeed;
+
 	float LastFire = 0;
 		
 	void Update () {
@@ -17,9 +19,17 @@ public class BossSeelieFairy : MonoBehaviour {
 
 		Debug.Log ("Seelie Fairy ANGRY!");
 
+		// Get the location of the player so we can aim it
+		GameObject p = GameObject.Find("Player");
+		if (!p)
+			return;
+		
 		// We're ready to fire, so do it!
 		GameObject shot = GameObject.Instantiate(SnakeShot, transform.position, Quaternion.identity) as GameObject;
-		shot.GetComponent<Projectile> ().SetVelocity (new Vector3 (0, -32, 0));
+
+		Vector3 dir = (p.transform.position - transform.position).normalized;
+
+		shot.GetComponent<Projectile> ().SetVelocity (new Vector3 (dir.x * FireSpeed, dir.y * FireSpeed + Camera.main.GetComponent<CameraMover>().MoveSpeed, 0));
 
 		LastFire = Time.timeSinceLevelLoad;
 	}
