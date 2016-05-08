@@ -7,15 +7,27 @@ public class Farmer : MonoBehaviour {
 	public float MoveSpeed;
 		
 	bool alerted;
+	bool dead;
 
 	// Use this for initialization
 	void Start () {
 		alerted = false;
+		dead = false;
 	}
-	
+
+	public void Die() {
+		transform.localScale = new Vector3 (1, -1, 1);
+		GetComponent<Animator> ().enabled = false;
+		GetComponent<Collider2D> ().enabled = false;
+		dead = true;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
+		if (dead)
+			return;
+		
 		// Move into alert if player comes close enough
 		GameObject p = GameObject.Find("Player");
 		if (!p)

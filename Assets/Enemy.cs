@@ -21,11 +21,13 @@ public class Enemy : MonoBehaviour {
 	// We use this callback to give the player more stacks on the bloodbar
 	public void Kill() {
 		GameObject.Find ("BloodBarManager").GetComponent<BloodBarManager>().AddKill();
-		Destroy (gameObject);
 
-		// Spawn a ghost if we have one!
+		// Spawn a ghost and flip our sprite (and stop us moving!)
 		if (Ghost) {
+			GetComponent<Farmer> ().Die();
 			GameObject g = GameObject.Instantiate (Ghost, transform.position, Quaternion.identity) as GameObject;
+		} else {
+			Destroy (gameObject);
 		}
 	}
 }
