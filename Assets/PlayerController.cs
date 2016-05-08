@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour {
 		float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
 
-		VelocityX = MoveSpeed * x;
-		VelocityY = Camera.main.GetComponent<CameraMover>().MoveSpeed + MoveSpeed * y;
+		VelocityX = (MoveSpeed * x * 4) / 3;
+		VelocityY = ((Camera.main.GetComponent<CameraMover>().MoveSpeed / 4) * 3) + MoveSpeed * y;
 			
 		transform.Translate (new Vector3 (
 			Time.deltaTime * VelocityX, 
