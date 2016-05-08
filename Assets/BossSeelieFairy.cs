@@ -17,7 +17,7 @@ public class BossSeelieFairy : MonoBehaviour {
 		if (LastFire + FireDelay >= Time.timeSinceLevelLoad)
 			return;
 
-		Debug.Log ("Seelie Fairy ANGRY!");
+//		Debug.Log ("Seelie Fairy ANGRY!");
 
 		// Get the location of the player so we can aim it
 		GameObject p = GameObject.Find("Player");

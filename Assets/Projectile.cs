@@ -24,6 +24,10 @@ public class Projectile : MonoBehaviour {
 			if (transform.position.z <= 0)
 				Destroy (gameObject);
 		}
+
+		// If we're no longer visible, kill ourselves
+		if (!GetComponent<SpriteRenderer> ().isVisible)
+			Destroy (gameObject);
 	}
 
 }

@@ -59,7 +59,7 @@ public class BloodThrow : MonoBehaviour {
 				b.GetComponent<ParticleSystemRenderer> ().sortingOrder = 4;
 				b.GetComponent<Projectile> ().SetVelocity (throwVel);
 
-				Debug.Log ("Threw Blood!");
+//				Debug.Log ("Threw Blood!");
 
 				// Reset for next throw
 				triggerTime = 0;
