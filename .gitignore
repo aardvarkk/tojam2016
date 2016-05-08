@@ -27,3 +27,6 @@ sysinfo.txt
 
 # Output
 dullahan.app/
+
+# Weird tilde
+*.meta~*
