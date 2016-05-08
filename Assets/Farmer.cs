@@ -3,24 +3,28 @@ using System.Collections;
 
 public class Farmer : MonoBehaviour {
 
-	static float MoveSpeed = 32f;
-	static float MeleeRange = 16f;
+	public float AlertRange;
+	public float MoveSpeed;
 		
+	bool alerted;
+
 	// Use this for initialization
 	void Start () {
-	
+		alerted = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		bool alerted = true;
+
+		// Move into alert if player comes close enough
+		GameObject p = GameObject.Find("Player");
+		if (!p)
+			return;
+		
+		if ((p.transform.position - transform.position).magnitude <= AlertRange)
+			alerted = true;
 
 		if (alerted) {
-
-			GameObject p = GameObject.Find ("Player");
-			if (!p) {
-				return;
-			}
 
 			Transform pt = p.transform;
 			Vector3 delta = (pt.position - transform.position);
@@ -42,13 +46,13 @@ public class Farmer : MonoBehaviour {
 //			Debug.Log (string.Format ("Player is in direction {0}", dir.ToString ()));
 				
 			// In melee range?
-			if (delta.magnitude <= MeleeRange) {
+//			if (delta.magnitude <= MeleeRange) {
 				// Attack!
-			} 
+//			} 
 			// Outside of melee range, so try to move into range
-			else {
+//			else {
 				transform.Translate (Time.deltaTime * MoveSpeed * delta.normalized);
-			}
+//			}
 
 //			Debug.Log (string.Format ("Player is at {0} and I'm at {1}", pt.position, transform.position));
 		}
