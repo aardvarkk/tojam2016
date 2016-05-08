@@ -7,6 +7,7 @@ public class Farmer : MonoBehaviour {
 	public float MoveSpeed;
 	public GameObject BloodPool;
 	public GameObject BloodSpray;
+	public AudioClip DeathSound;
 		
 	bool alerted;
 	bool dead;
@@ -42,6 +43,8 @@ public class Farmer : MonoBehaviour {
 			break;
 		}
 		spray.transform.localScale = new Vector3 (xScale, 1, 1);
+
+		GameObject.Find ("SoundPlayer").GetComponent<AudioSource> ().PlayOneShot (DeathSound);
 
 		dead = true;
 	}
