@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour {
 	public float MoveSpeed;
 	public float VelocityX, VelocityY; // accessible outside of us
 
+	void Start() {
+		Cursor.visible = false;
+	}
+
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
 			Debug.Log (string.Format("Collision with {0}", other.name));
